@@ -1,4 +1,5 @@
-FROM debian:wheezy
+FROM resin/rpi-raspbian:wheezy
+RUN df -h
 RUN apt-get update -qq && apt-get install -qy python python-pip python-dev git && apt-get clean
 RUN useradd -d /home/user -m -s /bin/bash user
 WORKDIR /code/
